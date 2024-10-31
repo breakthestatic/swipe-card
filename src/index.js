@@ -1,7 +1,9 @@
+// Swiper has some issues with its exports (see https://github.com/import-js/eslint-plugin-import/issues/2266)
+/*eslint import/no-unresolved: [2, { ignore: ['^swiper'] }]*/
 import { LitElement, html, css, unsafeCSS } from "lit";
 
-import Swiper from "swiper";
-import swiperStyle from "swiper/swiper-bundle.css";
+import Swiper from "swiper/bundle";
+import swiperStyle from "swiper/css/bundle";
 import deepcopy from "deep-clone-simple";
 
 const HELPERS = window.loadCardHelpers ? window.loadCardHelpers() : undefined;
